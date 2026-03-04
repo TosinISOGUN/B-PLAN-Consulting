@@ -8,7 +8,6 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  // For a user/organization site (USERNAME.github.io) use absolute root base
   base: '/',
   plugins: [react()].filter(Boolean),
   resolve: {
