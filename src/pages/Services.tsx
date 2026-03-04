@@ -1,12 +1,12 @@
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { CTASection } from '@/components/CTASection';
-import { 
-  Lightbulb, 
-  TrendingUp, 
-  Cog, 
-  Users, 
-  Shield, 
+import {
+  Lightbulb,
+  TrendingUp,
+  Cog,
+  Users,
+  Shield,
   Rocket,
   ArrowRight,
   CheckCircle
@@ -127,7 +127,7 @@ const Services = () => {
                 Our <span className="text-primary">Services</span>
               </h1>
               <p className="text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: '150ms' }}>
-                Comprehensive consulting solutions to address your most critical business challenges 
+                Comprehensive consulting solutions to address your most critical business challenges
                 and unlock new opportunities for growth.
               </p>
             </div>
@@ -141,7 +141,7 @@ const Services = () => {
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
-                  <Card 
+                  <Card
                     key={service.id}
                     id={service.id}
                     className="bg-card border-border overflow-hidden"
@@ -173,7 +173,7 @@ const Services = () => {
                             </Link>
                           </Button>
                         </div>
-                        <div className={`bg-secondary/50 p-8 lg:p-12 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                        <div className={`bg-[hsl(var(--section-alt))] p-8 lg:p-12 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                           <h3 className="text-xl font-semibold text-foreground mb-6">
                             Our Capabilities
                           </h3>
@@ -196,7 +196,7 @@ const Services = () => {
         </section>
 
         {/* Approach Section */}
-        <section className="py-24 bg-secondary/50">
+        <section className="py-24 bg-[hsl(var(--section-accent))]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif font-bold text-foreground mb-4">

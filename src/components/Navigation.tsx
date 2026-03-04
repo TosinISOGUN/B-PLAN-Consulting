@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, Search, ChevronDown } from 'lucide-react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -93,25 +94,25 @@ export const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link 
-              to="/insights" 
+            <Link
+              to="/insights"
               className={`text-sm ${isActive('/insights') ? 'text-primary' : 'text-muted-foreground'} hover:text-primary transition-colors`}
             >
               Insights
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className={`text-sm ${isActive('/about') ? 'text-primary' : 'text-muted-foreground'} hover:text-primary transition-colors`}
             >
               About
             </Link>
-            <Link 
-              to="/careers" 
+            <Link
+              to="/careers"
               className={`text-sm ${isActive('/careers') ? 'text-primary' : 'text-muted-foreground'} hover:text-primary transition-colors`}
             >
               Careers
             </Link>
-            
+
             {/* Search */}
             <Dialog open={searchOpen} onOpenChange={setSearchOpen}>
               <DialogTrigger asChild>
@@ -124,8 +125,8 @@ export const Navigation = () => {
                   <DialogTitle>Search</DialogTitle>
                 </DialogHeader>
                 <div className="mt-4">
-                  <Input 
-                    placeholder="Search insights, services, industries..." 
+                  <Input
+                    placeholder="Search insights, services, industries..."
                     className="bg-secondary/50"
                     autoFocus
                   />
@@ -136,13 +137,16 @@ export const Navigation = () => {
               </DialogContent>
             </Dialog>
 
+            <ThemeToggle />
+
             <Button asChild size="sm">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
+          {/* Mobile header controls */}
+          <div className="lg:hidden flex items-center gap-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
@@ -160,7 +164,7 @@ export const Navigation = () => {
               <div className="border-b border-border pb-4">
                 <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Services</p>
                 {servicesDropdown.slice(0, 5).map((item) => (
-                  <Link 
+                  <Link
                     key={item.href}
                     to={item.href}
                     className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -173,7 +177,7 @@ export const Navigation = () => {
               <div className="border-b border-border pb-4">
                 <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Industries</p>
                 {industriesDropdown.slice(0, 5).map((item) => (
-                  <Link 
+                  <Link
                     key={item.href}
                     to={item.href}
                     className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -183,22 +187,22 @@ export const Navigation = () => {
                   </Link>
                 ))}
               </div>
-              <Link 
-                to="/insights" 
+              <Link
+                to="/insights"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Insights
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
-              <Link 
-                to="/careers" 
+              <Link
+                to="/careers"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >

@@ -38,7 +38,7 @@ const AnimatedNumber = ({ value, suffix }: { value: number; suffix: string }) =>
 
 export const StatsSection = () => {
   return (
-    <section className="py-24 bg-secondary/50">
+    <section className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
@@ -51,7 +51,7 @@ export const StatsSection = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={index}
               className="text-center p-6 rounded-lg bg-card/50 border border-border hover:border-primary/50 transition-all duration-300"
               style={{ animationDelay: `${index * 100}ms` }}

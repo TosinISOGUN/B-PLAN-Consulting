@@ -30,19 +30,19 @@ const services = [
 
 export const ServicesGrid = () => {
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24 bg-[hsl(var(--section-alt))]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
+            <Card
               key={service.id}
               className="group bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden shadow-elegant hover:shadow-glow cursor-pointer"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <CardContent className="p-0">
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={service.image} 
+                  <img
+                    src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -55,7 +55,7 @@ export const ServicesGrid = () => {
                   <h3 className="text-xl font-serif font-semibold text-foreground mt-2 mb-4 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
-                  <a 
+                  <a
                     href={service.link}
                     className="inline-flex items-center text-sm text-muted-foreground group-hover:text-primary transition-colors"
                   >

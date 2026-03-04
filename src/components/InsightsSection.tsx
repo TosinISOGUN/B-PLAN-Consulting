@@ -27,7 +27,7 @@ const insights = [
 
 export const InsightsSection = () => {
   return (
-    <section id="insights" className="py-24 bg-gradient-card">
+    <section id="insights" className="py-24 bg-[hsl(var(--section-accent))]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
@@ -42,7 +42,7 @@ export const InsightsSection = () => {
           {insights.map((insight, index) => {
             const Icon = insight.icon;
             return (
-              <Card 
+              <Card
                 key={insight.id}
                 className="group bg-secondary/50 border-border hover:border-primary/50 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-glow"
                 style={{ animationDelay: `${index * 150}ms` }}
@@ -59,7 +59,7 @@ export const InsightsSection = () => {
                   <h3 className="text-xl font-serif font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
                     {insight.title}
                   </h3>
-                  <a 
+                  <a
                     href={insight.link}
                     className="inline-flex items-center text-sm text-muted-foreground group-hover:text-primary transition-colors"
                   >

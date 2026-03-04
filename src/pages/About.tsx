@@ -75,7 +75,7 @@ const About = () => {
                 About <span className="text-primary">B-PLAN</span>
               </h1>
               <p className="text-xl text-muted-foreground animate-fade-in" style={{ animationDelay: '150ms' }}>
-                For over two decades, we've partnered with the world's leading organizations 
+                For over two decades, we've partnered with the world's leading organizations
                 to tackle their most complex challenges and unlock transformative growth.
               </p>
             </div>
@@ -94,7 +94,7 @@ const About = () => {
                   <h2 className="text-3xl font-serif font-bold text-foreground">Our Mission</h2>
                 </div>
                 <p className="text-lg text-muted-foreground">
-                  To empower organizations with strategic insights and operational excellence 
+                  To empower organizations with strategic insights and operational excellence
                   that drive sustainable competitive advantage and measurable business outcomes.
                 </p>
               </div>
@@ -106,7 +106,7 @@ const About = () => {
                   <h2 className="text-3xl font-serif font-bold text-foreground">Our Vision</h2>
                 </div>
                 <p className="text-lg text-muted-foreground">
-                  To be the trusted partner of choice for organizations seeking to navigate 
+                  To be the trusted partner of choice for organizations seeking to navigate
                   complexity, embrace innovation, and achieve lasting transformation.
                 </p>
               </div>
@@ -115,7 +115,7 @@ const About = () => {
         </section>
 
         {/* Values */}
-        <section className="py-24 bg-secondary/50">
+        <section className="py-24 bg-[hsl(var(--section-alt))]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif font-bold text-foreground mb-4">Our Values</h2>
@@ -127,7 +127,7 @@ const About = () => {
               {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
-                  <div 
+                  <div
                     key={index}
                     className="p-6 bg-card rounded-lg border border-border hover:border-primary/50 transition-all duration-300 text-center"
                   >
@@ -154,13 +154,13 @@ const About = () => {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {leadership.map((leader, index) => (
-                <div 
+                <div
                   key={index}
                   className="group text-center"
                 >
                   <div className="relative mb-4 overflow-hidden rounded-lg">
-                    <img 
-                      src={leader.image} 
+                    <img
+                      src={leader.image}
                       alt={leader.name}
                       className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -176,7 +176,7 @@ const About = () => {
         </section>
 
         {/* Timeline */}
-        <section className="py-24 bg-secondary/50">
+        <section className="py-24 bg-[hsl(var(--section-accent))]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif font-bold text-foreground mb-4">Our Journey</h2>
@@ -187,10 +187,10 @@ const About = () => {
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" />
-              
+
               <div className="space-y-8">
                 {timeline.map((item, index) => (
-                  <div 
+                  <div
                     key={index}
                     className={`flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                   >
