@@ -11,7 +11,7 @@ B-PLAN Consulting delivers transformative business strategies and operational ex
   - Interactive Service catalog
   - In-depth Industry Insights & Research articles
   - Careers portal and Team showcase
-  - Dynamic Theme System (Light/Dark Mode)
+  - Dark-First Design for a professional, focused atmosphere
   - Responsive design for all devices
 
 ## Tech Stack

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Menu, X, Search, ChevronDown } from 'lucide-react';
-import { ThemeToggle } from '@/components/ThemeToggle';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -137,7 +136,6 @@ export const Navigation = () => {
               </DialogContent>
             </Dialog>
 
-            <ThemeToggle />
 
             <Button asChild size="sm">
               <Link to="/contact">Contact Us</Link>
@@ -146,7 +144,6 @@ export const Navigation = () => {
 
           {/* Mobile header controls */}
           <div className="lg:hidden flex items-center gap-2">
-            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
